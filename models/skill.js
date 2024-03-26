@@ -16,4 +16,10 @@ const skills = [
   { name: "Heroku", completed: false },
 ];
 
-module.exports = skills;
+module.exports = {
+  getAll,
+};
+
+function getAll() {
+  return skills;
+}

@@ -9,9 +9,13 @@
   <body>
     <a href="/">Home</a>
     <h1>Skills</h1>
-  
+    <ul>
+      <% skills.forEach(s => { %>
+      <li>
+        <a href="/skills/<%= s.id %>"><%= s.name %></a>
+        - <%= s.completed ? 'completed': 'not completed' %>
+      </li>
+      <% }) %>
     </ul>
   </body>
 </html>
-
-

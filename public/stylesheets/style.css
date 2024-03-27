@@ -1,23 +1,20 @@
 body {
-  margin: 0px
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00b7ff; 
-  padding: 20px; 
+  color: #00b7ff;
+  padding: 20px;
 }
 
-#nav-bar{
+#nav-bar {
   background-color: #333;
   color: white;
   padding: 10px;
   display: flex;
-  
-
 }
 
 h1 {
-  font-size: 2em;  
+  font-size: 2em;
   padding: 30px;
 }

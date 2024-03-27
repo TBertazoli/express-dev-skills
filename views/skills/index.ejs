@@ -4,7 +4,6 @@
   <% skills.forEach(s => { %>
   <li>
     <a href="/skills/<%= s.id %>"><%= s.name %></a>
-    - <%= s.completed ? 'completed': 'not completed' %>
   </li>
   <% }) %>
 </ol>

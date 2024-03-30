@@ -1,5 +1,5 @@
 <%-include('../partials/navbar.ejs') %>
-<h1>Skills</h1>
+<h3>Skills as of <%=time %></h3>
 <ol>
   <% skills.forEach(s => { %>
   <li>
@@ -7,3 +7,4 @@
   </li>
   <% }) %>
 </ol>
+<a href="/skills/new"> Add Skill</a>

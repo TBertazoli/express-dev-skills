@@ -1,10 +1,16 @@
-<%-include('../partials/navbar.ejs') %>
-<h3>Skills as of <%=time %></h3>
-<ol>
-  <% skills.forEach(s => { %>
-  <li>
-    <a href="/skills/<%= s.id %>"><%= s.name %></a>
-  </li>
-  <% }) %>
-</ol>
-<a href="/skills/new"> Add Skill</a>
+<body>
+  <%-include('../partials/navbar.ejs') %>
+  <div class="main">
+    <h3>Skills as of <%=time %></h3>
+    <ol>
+      <% skills.forEach(s => { %>
+      <li>
+        <a href="/skills/<%= s.id %>"><%= s.name %></a>
+      </li>
+      <% }) %>
+    </ol>
+    <a href="/skills/new"> Add Skill</a>
+  </div>
+
+  <%-include('../partials/footer.ejs') %>
+</body>

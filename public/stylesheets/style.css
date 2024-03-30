@@ -4,11 +4,18 @@ body {
 
 .main {
   min-height: -webkit-fill-available;
+  padding: 10px;
 }
 .nav {
   padding: 20px;
 }
 
+#form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 a {
   color: #00b7ff;
 }
@@ -22,7 +29,6 @@ a {
 
 h1 {
   font-size: 2em;
-  padding: 30px;
 }
 
 .contact {

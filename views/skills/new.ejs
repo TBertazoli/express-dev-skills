@@ -1,8 +1,10 @@
 <body>
   <%- include('../partials/navbar.ejs') %>
-
-  <form actions="/skills" method="POST">
-    <input type="text" name="skill" />
-    <button type="submit">Save Skill</button>
-  </form>
+  <div class="main">
+    <form id="form" actions="/skills" method="POST">
+      <input type="text" name="skill" />
+      <button type="submit">Save Skill</button>
+    </form>
+  </div>
+  <%-include('../partials/footer.ejs') %>
 </body>

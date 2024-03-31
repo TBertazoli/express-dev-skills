@@ -4,7 +4,15 @@ module.exports = {
   index,
   show,
   new: newSkill,
+  create,
 };
+
+function create(req, res) {
+  //add the new skill to the skills array
+  Skills.create(req.body);
+  //Always do a redirect when data has been changed
+  res.redirect("/skills");
+}
 
 function newSkill(req, res) {
   res.render("skills/new", {

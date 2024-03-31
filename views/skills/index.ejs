@@ -7,13 +7,6 @@
     <ul>
       <% skills.forEach((s) => { %>
       <li>
-        <form
-          action="/skills/<%= s.id %>?_method=DELETE"
-          method="POST"
-          class="delete-form"
-        >
-          <button type="submit">Delete</button>
-        </form>
         <a href="/skills/<%= s.id %>"><%= s.name %></a>
         - <%= s.completed ? 'Complete' : 'Incomplete' %>
       </li>

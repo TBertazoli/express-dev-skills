@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const methodOverride = require("method-override");
 
 const indexRouter = require("./routes/index");
 const skillsRouter = require("./routes/skills");
@@ -39,6 +40,8 @@ app.use(cookieParser());
 
 //Serve static files from the public folder
 app.use(express.static(path.join(__dirname, "public")));
+
+app.use(methodOverride("_method"));
 
 //The first arg is the "starts with" path
 app.use("/", indexRouter);

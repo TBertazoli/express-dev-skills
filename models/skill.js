@@ -20,7 +20,16 @@ module.exports = {
   getAll,
   getOne,
   create,
+  deleteOne,
 };
+
+function deleteOne(id) {
+  //all properties attached to req.patams are strings
+  id = parseInt(id);
+  //Find the index based on the id of the todo object
+  const idx = skills.findIndex((skill) => skill.id === id);
+  skills.splice(idx, 1);
+}
 function create(skill) {
   //add the id
   skill.id = Date.now() % 1000000;

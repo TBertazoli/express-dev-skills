@@ -5,7 +5,13 @@ module.exports = {
   show,
   new: newSkill,
   create,
+  delete: deleteSkill,
 };
+
+function deleteSkill(req, res) {
+  Skills.deleteOne(req.params.id);
+  res.redirect("/skills");
+}
 
 function create(req, res) {
   //add the new skill to the skills array
@@ -30,5 +36,6 @@ function show(req, res) {
 function index(req, res) {
   res.render("skills/index", {
     skills: Skills.getAll(),
+    title: "Skill List",
   });
 }

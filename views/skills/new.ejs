@@ -1,10 +1,10 @@
+<%- include('../partials/navbar.ejs') %>
 <body>
-  <%- include('../partials/navbar.ejs') %>
   <div class="main">
     <form id="form" action="/skills" method="POST" autocomplete="off">
       <input type="text" name="name" />
       <button type="submit">Save Skill</button>
     </form>
   </div>
-  <%-include('../partials/footer.ejs') %>
 </body>
+<%-include('../partials/footer.ejs') %>

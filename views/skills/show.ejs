@@ -1,6 +1,7 @@
-<body>
-  <%- include('../partials/navbar.ejs') %>
-  <div class="main">
+<%- include('../partials/navbar.ejs') %>
+<body class ="main">
+
+  
     <form
       action="/skills/<%= skill.id %>?_method=DELETE"
       method="POST"
@@ -8,8 +9,13 @@
     >
       <button type="submit">Delete</button>
     </form>
+
+      <button type="submit"> <a href ="/skills/<%= skill.id %>/edit">Edit Skill</a></button>
+    </form>
+
     <h3><%= skill.name %></h3>
     <h3>Complete: <%= skill.completed ? 'Yes': 'No' %></h3>
-  </div>
-  <%-include('../partials/footer.ejs') %>
+ 
+  
 </body>
+<%-include('../partials/footer.ejs') %>

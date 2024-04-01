@@ -1,21 +1,18 @@
-<body>
-  <%-include('../partials/navbar.ejs') %>
-  <div class="main">
-    <h1>Skills</h1>
-    <a href="/skills/new"> Add new Skill</a>
+<%-include('../partials/navbar.ejs') %>
+<body class="main">
+  <h1>Skills</h1>
+  <a href="/skills/new"> Add new Skill</a>
 
-    <ul>
-      <% skills.forEach((s) => { %>
-      <li>
-        <a href="/skills/<%= s.id %>"><%= s.name %></a>
-        - <%= s.completed ? 'Complete' : 'Incomplete' %>
-      </li>
+  <ul>
+    <% skills.forEach((s) => { %>
+    <li>
+      <a href="/skills/<%= s.id %>"><%= s.name %></a>
+      - <%= s.completed ? 'Complete' : 'Incomplete' %>
+    </li>
 
-      <% }); %>
-    </ul>
+    <% }); %>
+  </ul>
 
-    <p>Skills as of <%=time %></p>
-  </div>
-
-  <%-include('../partials/footer.ejs') %>
+  <p>Skills as of <%=time %></p>
 </body>
+<%-include('../partials/footer.ejs') %>

@@ -1,0 +1,11 @@
+<%- include('../partials/navbar.ejs') %>
+<body class="main">
+  <form action="/skills/<%= skill.id %>?_method=PUT" method="POST">
+    <input type="text" name="name" value="<%= skill.name %>" />
+    <input type="checkbox" name="completed" value=true <%= skill.completed ?
+    'checked' : '' %> />
+    <button type="submit">Update Skill</button>
+  </form>
+</body>
+
+<%-include('../partials/footer.ejs') %>

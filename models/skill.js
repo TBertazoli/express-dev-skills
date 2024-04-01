@@ -21,7 +21,14 @@ module.exports = {
   getOne,
   create,
   deleteOne,
+  update,
 };
+
+function update(skill) {
+  const idx = skills.findIndex((s) => s.id === parseInt(skill.id));
+  skills[idx].name = skill.name;
+  skills[idx].completed = skill.completed ? true : false;
+}
 
 function deleteOne(id) {
   //all properties attached to req.patams are strings
